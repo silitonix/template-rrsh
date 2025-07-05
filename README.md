@@ -1,4 +1,4 @@
-# TEMPLATE-rrsh
+# TEMPLATE-RRSH
 
 contain shadcn+router
 
