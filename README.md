@@ -11,7 +11,7 @@ contain shadcn+router
 ## Getting Started
 
 ```bash
-wget https://github.com/silitonix/ui-template/archive/refs/heads/main.zip &&
+https://github.com/silitonix/template-rrsh/archive/refs/heads/main.zip &&
 unzip main.zip &&
 rm main.zip
 ```
