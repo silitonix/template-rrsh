@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import { ThemeProvider } from "~/components/ui/theme-provider";
 import "./app.css";
 import "~/localization/i18n";
+import { StateError } from "./lib/error";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -52,7 +53,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
 
-  if (isRouteErrorResponse(error)) {
+  if (isRouteErrorResponse(error) || error instanceof StateError) {
     message = error.status === 404 ? "404" : "Error";
     details =
       error.status === 404
