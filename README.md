@@ -5,6 +5,7 @@
 - **Shadcn UI**: shadcn ready with theme support
 - **React Router 7**: preconfigured file aprouch
 - **Multilingual**: used i18n for multilingual support including routes
+- **Global error handling**: implemented 404 or etc error state handeling
 
 ## Getting Started 🛠️
 
@@ -22,7 +23,7 @@ Install the dependencies:
 npm install
 ```
 
-### Development 📦 
+### Development 📦
 
 Start the development server with HMR:
 

@@ -12,6 +12,7 @@ import { ThemeProvider } from "~/components/ui/theme-provider";
 import "./app.css";
 import "~/localization/i18n";
 import { StateError } from "./lib/error";
+import { initI18n } from "~/localization/i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -45,6 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  initI18n();
   return <Outlet />;
 }
 
