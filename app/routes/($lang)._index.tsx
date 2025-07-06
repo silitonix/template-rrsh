@@ -1,4 +1,6 @@
+import { useLang } from "~/localization/i18n";
 import type { Route } from "./+types/_index";
+import { t } from "i18next";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,5 +10,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function _index() {
-  return <div>Hello world!</div>;
+  useLang();
+  return <div>{t("hello")}</div>;
 }
