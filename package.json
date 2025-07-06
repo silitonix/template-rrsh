@@ -9,6 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-slot": "^1.2.3",
     "@react-router/fs-routes": "^7.6.3",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
