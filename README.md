@@ -1,7 +1,5 @@
 # TEMPLATE-RRSH 🚀
 
-contain shadcn+router
-
 ## Features 🌟
 
 - **Shadcn UI**: shadcn ready with theme support
