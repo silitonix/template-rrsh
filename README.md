@@ -1,14 +1,14 @@
-# TEMPLATE-RRSH
+# TEMPLATE-RRSH 🚀
 
 contain shadcn+router
 
-## Features
+## Features 🌟
 
-- shadcn
-- router
-- tailwind
+- **Shadcn UI**: shadcn ready with theme support
+- **React Router 7**: preconfigured file aprouch
+- **Multilingual**: used i18n for multilingual support including routes
 
-## Getting Started
+## Getting Started 🛠️
 
 ```bash
 wget https://github.com/silitonix/template-rrsh/archive/refs/heads/main.zip &&
@@ -24,7 +24,7 @@ Install the dependencies:
 npm install
 ```
 
-### Development
+### Development 📦 
 
 Start the development server with HMR:
 
@@ -42,7 +42,7 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## Deployment 🚀
 
 ### Docker Deployment
 
