@@ -1,5 +1,4 @@
-import { initI18n } from "~/localization/i18n";
-import type { Route } from "./+types/($lang)._index";
+import type { Route } from "./+types/_index";
 import { t } from "i18next";
 
 export function meta({}: Route.MetaArgs) {

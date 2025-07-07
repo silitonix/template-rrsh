@@ -10,9 +10,9 @@ import {
 import type { Route } from "./+types/root";
 import { ThemeProvider } from "~/components/ui/theme-provider";
 import "./app.css";
-import "~/localization/i18n";
 import { StateError } from "./lib/error";
-import { initI18n } from "~/localization/i18n";
+import { initI18n } from "~/lib/i18n";
+import "~/lib/i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
