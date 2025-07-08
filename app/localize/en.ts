@@ -1,6 +1,6 @@
 const en = {
   translation: {
-    hellow: "Hello world!",
+    hello: "Hello world!",
   },
 };
 
