@@ -7,6 +7,8 @@ import { StateError } from "~/lib/error";
 import { useLocation } from "react-router";
 import en from "~/localize/en";
 import { useNavigate } from "react-router";
+import { replace } from "react-router";
+import { redirect } from "react-router";
 
 /* add new languages to the resources */
 const lng_res = { en };
@@ -15,9 +17,15 @@ const lng_default = "en";
 const lng_supported = Object.keys(lng_res);
 
 function iUseLocation(code?: string) {
+  const { lng } = useParams();
   const loc = useLocation();
+  if (lng === undefined) return loc;
   let pathname = loc.pathname;
-  pathname = pathname.replace(/^\/?[^\/]+/, code || "");
+  if (code && !Object.hasOwn(lng_res, code)) {
+    throw new Error("Language does not exit");
+  }
+  pathname = pathname.replace(/^\/?[^\/]+$/, code ? `/${code}` : "/");
+
   return { ...loc, pathname };
 }
 
@@ -53,8 +61,7 @@ function INavLink(props: NavLinkProps) {
 export function initI18n() {
   const { lng } = useParams();
   if (lng == lng_default) {
-    const navigate = useNavigate();
-    navigate(iUseLocation());
+    location.replace(iUseLocation().pathname);
   }
   if (typeof window == "undefined") return;
   if (typeof lng === "undefined") {
