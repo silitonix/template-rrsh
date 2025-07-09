@@ -30,9 +30,11 @@ function iTo(to: To): To {
       pathname: newTo,
     };
   }
-  if (!newTo.pathname?.startsWith("/")) return to;
-  newTo.pathname = `/${lng}${newTo.pathname}`;
-  return newTo;
+  if (newTo.pathname?.startsWith("/")) {
+    newTo.pathname = `/${lng}${newTo.pathname}`;
+    return newTo;
+  }
+  return to;
 }
 
 function ILink(props: LinkProps) {
