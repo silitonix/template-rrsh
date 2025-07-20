@@ -64,13 +64,13 @@ export function initI18n() {
     location.replace(iUseLocation().pathname);
   }
   if (typeof window == "undefined") return;
-  if (typeof lng === "undefined") {
+  if (typeof lng == "undefined") {
     i18n.changeLanguage(lng_default);
     localStorage.setItem(lng_key, lng_default);
     return;
   }
 
-  const current = localStorage.getItem("vite");
+  const current = localStorage.getItem(lng_key);
   if (lng == current) return;
   if (!Object.hasOwn(lng_res, lng)) {
     throw new StateError(404);
