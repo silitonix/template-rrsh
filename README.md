@@ -17,7 +17,7 @@ rm main.zip
 ```
 - using bun 
 ```bash
-bun create silitonix/template-rrsh
+bun create silitonix/template-rrsh --force
 ```
 ### Installation
 
