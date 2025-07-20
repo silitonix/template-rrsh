@@ -9,18 +9,22 @@
 
 ## Getting Started 🛠️
 
+- downloading from source
 ```bash
 wget https://github.com/silitonix/template-rrsh/archive/refs/heads/main.zip &&
 unzip main.zip &&
 rm main.zip
 ```
-
+- using bun 
+```bash
+bun create silitonix/template-rrsh
+```
 ### Installation
 
 Install the dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development 📦
@@ -28,7 +32,7 @@ npm install
 Start the development server with HMR:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
@@ -38,7 +42,7 @@ Your application will be available at `http://localhost:5173`.
 Create a production build:
 
 ```bash
-npm run build
+bun run build
 ```
 
 ## Deployment 🚀
